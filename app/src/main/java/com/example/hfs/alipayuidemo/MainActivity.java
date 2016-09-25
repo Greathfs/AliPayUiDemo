@@ -1,5 +1,6 @@
 package com.example.hfs.alipayuidemo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                PayDetailFragment payDetailFragment=new PayDetailFragment();
-                payDetailFragment.show(getSupportFragmentManager(),"payDetailFragment");
+               startActivity(new Intent(MainActivity.this,PayActivity.class));
+                MainActivity.this.finish();
             }
         });
     }
